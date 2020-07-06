@@ -1,0 +1,267 @@
+/* UNIVERSAL SETTING */
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html{
+font-size: 62.5%;
+font-family: 'Lato',sans-serif;
+font-weight: 400;
+color: #eee;
+line-height: 1.7;
+text-rendering: optimizeLegibility;
+overflow: hidden;
+}
+
+body{
+	font-size: 1.6rem;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.row{
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+
+
+/******************************************************* LANDING PRELOADER STARTING POINT ***********************************************************/
+
+.landing__preloader{
+	background-color: #0d0d0d;
+	height: 100vh;
+	width: 100vw;
+	opacity: 0;
+	cursor: default;
+	animation-name: fullPreloaderDisplayAnimation;
+	animation-duration: .1s;
+	backface-visibility: hidden;
+	animation-fill-mode: backwards;
+	animation-delay: 5.8s;
+	animation-timing-function: linear;
+	overflow: hidden;
+	z-index: 111111111111;
+	transition: transform 1s; 
+}
+
+.giphy-preloader{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% , -50%);
+	border: none;
+	pointer-events: none;
+}
+
+.preloader__text{
+position: absolute;
+top: 3%;
+left: 3%;
+width 100%;
+}
+
+.preloader__text--Primary{
+	font-size: 2.8rem;
+}
+
+.preloader__text--Primary::before{
+	content: '<';
+	position: absolute;
+	top: 3rem;
+	left: -2rem;
+	font-size: 3.2rem;
+	font-weight: 300;
+}
+
+.preloader__text--Primary::after{
+	content: '>';
+	position: absolute;
+	top: 3rem;
+	left: 25rem;
+	font-size: 3.2rem;
+	font-weight: 300;
+}
+
+.doctypeSign{
+	position: absolute;
+	top: 3.6rem;
+	left: 0.8rem;
+	font-size: 2.5rem;
+	color: #E53A40;
+	font-weight: 900;
+}
+
+.preloader__text--Seconadary{
+	width: 25rem;
+	height: 2.2rem;
+	position: relative;
+	overflow: hidden;
+	font-size: 1.6rem;
+	font-weight: 900;
+	backface-visibility: hidden;
+	text-align: center;
+}
+
+@media only screen and (max-width:450px){
+	
+	.preloader__text{
+		margin-left: 20px;
+      }
+}
+
+
+.preloader__text--Seconadary--1,
+.preloader__text--Seconadary--2,
+.preloader__text--Seconadary--3,
+.preloader__text--Seconadary--4,
+.preloader__text--Seconadary--5{
+	opacity: 1;
+	position: absolute;
+	top: 70%;
+	width: 100%;
+	-webkit-animation-name: anima;
+	animation-name: anima;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: backwards;
+	animation-fill-mode: backwards;
+	animation-timing-function: ease-in-out;
+	letter-spacing: 1px;
+	color: #F17F42;
+	backface-visibility: hidden;
+	text-align: center;
+}
+
+
+.preloader__text--Seconadary--2{
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+	letter-spacing: 0.5px;
+}
+
+.preloader__text--Seconadary--3{
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+}
+
+.preloader__text--Seconadary--4{
+	-webkit-animation-delay: 3s;
+	animation-delay: 3s;
+}
+
+.preloader__text--Seconadary--5{
+	-webkit-animation-delay: 4s;
+	animation-delay: 4s;
+	-webkit-animation-name: anima5;
+	animation-name: anima5;
+	animation-duration: 3s;
+}
+
+
+
+.preloader__countdown--box{
+	position: absolute;
+	top: 76%;
+	right: 5%;
+	opacity: 0;
+	width: 45rem;
+	cursor:default;
+	animation-name:  preloader__countdown--box--Animation;
+	animation-duration: 4.27s;
+	animation-fill-mode: backwards;
+	animation-timing-function: linear;
+	text-align: right;
+}
+
+#preloader__countdown{
+font-size: 9rem;
+color: #F17F42;
+font-family: 'Monoton', cursive;
+}
+
+
+/****************************************************************************************************************************************************/
+
+
+
+/********************************************************** ANIMATION KEYFRAMES STARTING POINT *****************************************************/
+
+
+@keyframes anima{ /*applied on all preloader secondary texts */
+	0%{
+	    opacity: 1;
+	}
+	
+	50%{
+	    opacity: 1;
+		 top: 0;
+	}
+	
+	95%{
+	    opacity: 1;
+		 top: 0;
+	}
+	
+	100%{
+		opacity: 1;
+		top: -100%;
+	}
+}
+
+@keyframes anima5{ /*applied on 5th preloader secondary text */
+	0%{
+	    opacity: 1;
+	}
+	
+	25%{
+        opacity: 1;
+		 top: 0;
+	}
+	
+	50%{
+	    opacity: 1;
+		 top: 0;
+	}
+
+	
+	100%{
+     opacity: 1;
+		 top: 0;
+	}
+}
+
+@keyframes preloader__countdown--box--Animation{
+	0%{
+    opacity: 1;
+	}
+	
+	98%{
+    opacity: 1;
+	}
+	
+	100%{
+    opacity: 0;
+	}
+}
+
+@keyframes fullPreloaderDisplayAnimation{
+	0%{
+		opacity: 1;
+	}
+	
+	98%{
+		opacity: 1;
+	}
+	
+	100%{
+		opacity: 1;
+	}
+}
+
+
+
